@@ -54,5 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
 In this sample code, the lines below the `],` line are indented incorrectly. This only happen when you put comments like the ones in this code. The same code without comments is indented properly.
 
 TODO:
+
 1 - Fix the above errors
+
 2 - Find a flag for cinoptions (if possible) to fix the `);` instead of "[overriding](https://github.com/tiagofumo/dart-vim-flutter-layout/blob/08d522ac712aee92988459eba857336e7f08372c/after/indent/dart.vim#L25-L28)" the DartIndent function from [dart-lang/dart-vim-plugin](https://github.com/dart-lang/dart-vim-plugin/blob/master/indent/dart.vim)
