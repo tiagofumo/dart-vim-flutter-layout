@@ -23,8 +23,10 @@ function! DartIndentFlutter()
   endif
 
   " Do not indent );
-  if currentLine =~# '^\s*);$'
+  if currentLine =~# '^\s*)[,;]\?$'
     let indentTo = indent(v:lnum - 1) - &shiftwidth
+  elseif previousLine =~# '^\s*)[,;]\?$' && !(currentLine =~# '^\s*[\]\}]')
+    let indentTo = indent(v:lnum - 1)
   endif
 
   " Indent after opening List literal
