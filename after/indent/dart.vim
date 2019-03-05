@@ -24,7 +24,7 @@ function! DartIndentFlutter()
   endif
 
   " Do not indent );
-  if currentLine =~# '^\s*)[,;]\?$' " curline is ) or ), or );
+  if currentLine =~# '^\s*[)\]\}]' " curline stats with ) or ] or }
     let indentTo = indent(prevLnum) - &shiftwidth
   elseif previousLine =~# '^\s*[)\}][,;]\?$' && !(currentLine =~# '^\s*[\]\}]')
     " prevline is ) or } with or without a , or ;
